@@ -43,9 +43,9 @@ router.delete('/:id', (req, res) => {
     }
 } );
 
-router.get('/find/:firstName', (req, res) => {
+router.get('/find/:productName', (req, res) => {
     try {
-        return res.json(controller.findProductByName(req.params.firstName));
+        return res.json(controller.findProductByName(req.params.productName));
     } catch (error) {
         res.status(500).json(error);
     }
